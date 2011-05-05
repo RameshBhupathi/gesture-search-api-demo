@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.android.gesturesearchapidemo"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <provider android:name="com.example.android.gsapidemo.CountryProvider"
+            android:authorities="com.example.android.gsapidemo.suggestion"
+            android:exported="false"
+            android:grantUriPermissions="true">
+        </provider>
+        <activity android:name="com.example.android.gsapidemo.GestureSearchAPIDemo"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="8"/>
+</manifest>
+ 
