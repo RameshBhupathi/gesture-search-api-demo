@@ -44,6 +44,14 @@ public class GestureSearchAPIDemo extends Activity {
   private static final int SHOW_NONE = 1;
   // Show all of date items
   private static final int SHOW_ALL = 2;
+  
+  /**
+   * The theme of Gesture Search can be light or dark
+   */
+  private static final String THEME = "theme";
+  private static final int THEME_LIGHT = 0;
+  private static final int THEME_DARK = 1;
+  
   /** Keys for results returned by Gesture Search */
   private static final String SELECTED_ITEM_ID = "selected_item_id";
   private static final String SELECTED_ITEM_NAME = "selected_item_name";
@@ -72,6 +80,7 @@ public class GestureSearchAPIDemo extends Activity {
           intent.setData(CountryProvider.CONTENT_URI);
           intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
           intent.putExtra(SHOW_MODE, SHOW_ALL);
+          intent.putExtra(THEME, THEME_LIGHT);
           startActivityForResult(intent, GESTURE_SEARCH_ID);
         } catch (ActivityNotFoundException e) {
           Log.e("GestureSearchExample", "Gesture Search is not installed");
