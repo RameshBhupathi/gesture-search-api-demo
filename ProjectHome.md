@@ -1,0 +1,1 @@
+The demo shows how Android application developers can invoke Gesture Search inside their application so that a user can access application specific data using Gesture Search.
